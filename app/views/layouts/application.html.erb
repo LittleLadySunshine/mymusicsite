@@ -6,9 +6,72 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+  <div class="test2" id="Container">
+    <div class="Outer" style="height: 342px;">
 
-<%= yield %>
+  <div id= "Header">
+    <div id= "HeaderUpper">
+      <div id= "TopMenu">
+        <ul>
+          <li><a href="http://adrianatd.com/" class="active"><span>Sign In</span></a></li>
+          <li><a href="http://adrianatd.com/">Create an Account</a></li>
+          <li><a href="http://adrianatd.com/">My Account</a></li>
+          <li><a href="http://adrianatd.com/">Gift Certificates</a></li>
+          <li><a href="http://adrianatd.com/">View Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-</body>
-</html>
+  <div id= "Logo">
+    <div id= "LogoContainer">
+      <h1><span>Denise McCoy</span></h1>
+    </div>
+  </div>
+
+  <div id="HeaderLower">
+    <div class="Block">
+      <div class="Block Panel BlockContent" id="Menu">
+        <ul class= "parent">
+          <li class="First">
+            <a href="http://www.adrianatd.com/" class="active"><span>Home</span></a></li>
+            <li><a href="http://www.adrianatd.com/performances/">Performances</a></li>
+            <li><a href="http://www.adrianatd.com/teaching-studio/">Teaching</a></li>
+            <li><a href="http://www.adrianatd.com/blog/">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Wrapper" style="padding-top: 390px;">
+<main><%= yield %></main>
+</div>
+
+
+
+    <div id= "ContainerFooter">
+      <div class="Center">
+        <div id="FooterUpper">
+          <div class="Column">
+            <div class="Block CategoryList Panel">
+              <h2>Categories</h2>
+              <div class="BlockContent">
+                <ul>
+                  <ul class="category-list">
+                    <li><a href="http://www.adrianatd.com/" class="active"><span>Home</span></a></li>
+                    <li><a href="http://www.adrianatd.com/performances/">Performances</a></li>
+                    <li><a href="http://www.adrianatd.com/teaching-studio/">Teaching</a></li>
+                    <li><a href="http://www.adrianatd.com/blog/">Blog</a></li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
