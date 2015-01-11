@@ -14,13 +14,15 @@
  *= require_self
  */
  /* Global Reset */
- * {
-   margin: 0;
-   padding: 0;
-   outline: none;
-   background: none;
+ *, *:after, *:before {
+   box-sizing: border-box;
  }
  /* REQUIRED BUTTON STYLES for reset: */
+
+body {
+  background: gray;
+}
+
  button.btn {
    font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
    font-size: 0;
@@ -54,12 +56,6 @@
    vertical-align:middle;
  }
 
- @media screen and (-webkit-min-device-pixel-ratio:0) {
-   /* Safari and Google Chrome only - fix margins */
-   button.btn span {
-     margin-top: -1px;
-   }
- }
 
  .clear, .cf {
    clear:both;
@@ -103,8 +99,6 @@
  .TitleHeading,
  .slide-text,
  #HeaderLower li,
- .ProductActionAdd,
- .ProductDetailsGrid .DetailRow.PriceRow .Value,
  .QuickViewBtn,
  .btn {
    letter-spacing: 0px;
@@ -133,10 +127,7 @@
    margin: 0 auto;
 
  }
- .FeaturedProducts h2,
- #HomeNewProducts h2,
- #CartHeader h1,
- #CompareContent h2,
+
  .PageHeader,
  .title{
    padding: 0 0 0 0;
@@ -147,31 +138,8 @@
    background: url(../images/runaway/bg_line.png) repeat-x left center;
    margin: 0 0 35px 0;
  }
- #SideProductAlsoBought h2 {
-   margin-bottom: 35px;
- }
- #CartHeader h1,
- #CompareContent h2,
- .title {
-   color: #000000;
-   background: url(../images/runaway/bg_line_black.png) repeat-x left center;
-   text-transform: uppercase;
-   font-family: Karla, 'Arial, Helvetica, sans-serif';
-   letter-spacing: 0.1em;
-   text-transform: uppercase;
- }
- .FeaturedProducts h2 span,
- #HomeNewProducts h2 span,
- .PageHeader span , #Wrapper .title span {
-   color: #ffffff;
-   padding: 0 20px;
-   background: url(../images/runaway/bg_body.png) repeat;
-   text-transform: uppercase;
-   font-family: Karla, 'Arial, Helvetica, sans-serif';
-   letter-spacing: 0.1em;
-   text-transform: uppercase;
-   maargin: 0 0 25px 0;
- }
+
+
  .PageHeader,
  .title {
    margin-bottom: 39px;
@@ -485,6 +453,7 @@
    min-height: 50px;
    position: relative;
    z-index: 2;
+
  }
  #HeaderLower .sf-sub-indicator,
  #FooterUpper .sf-sub-indicator {
@@ -1100,11 +1069,7 @@
    display: inline;
    color: #595959;
  }
- #FooterUpper .Column.NewsletterColumn {
-   width: 245px;
-   margin-right: 0;
-   float: right;
- }
+
  #FooterUpper h2,
  #FooterUpper h3{
    color: #999;
@@ -1134,61 +1099,8 @@
  #FooterUpper li ul, #FooterUpper li:hover ul {
    display: none !important;
  }
- #FooterUpper .RecentNews li {
-   background: none;
-   margin-left: 0px;
- }
- #FooterUpper .RecentNews li h5 {
-   margin: 10px 0 0 0;
- }
- #FooterUpper .RecentNews li p {
-   margin: 0px 0 0;
- }
 
- /* Newsletter Subscription Form */
- .NewsletterSubscription {
-   clear: both;
-   float: left;
-   width: 100%;
-   margin-bottom: 0 !important;
- }
- .NewsletterSubscription h2 {
-   padding-bottom: 8px;
- }
- .NewsletterSubscription label {
-   clear: both;
-   float: left;
-   width: 75px;
-   width: 6.5em;
-   font-size: 0.85em;
-   padding: 3px 0 0 0;
- }
- .NewsletterSubscription input {
-   float: left;
-   width: 200px;
-   padding: 7px;
-   margin: 0px 0 7px 0;
-   font-size: 11px;
-   background: none;
-   border: 1px solid #595959;
- }
- .NewsletterSubscription .Button {
-   float: right;
-   padding: 0 !important;
-   width: 17px;
-   height: 35px;
-   border: 0;
-   margin-top: 0px;
-   background: url(../images/arrow-right.png) no-repeat !important;
-   border: solid 0px !important;
 
- }
- .NewsletterSubscription .Button:hover {
-   border: solid 0px !important;
-   opacity: 0.7 !important;
-   filter: alpha(opacity = 70) !important;
-
- }
 
  /* News Lists */
  #HomeRecentBlogs ul {
@@ -1206,229 +1118,10 @@
  }
 
 
- /* Product Listings */
- .ProductList {
-   list-style: none;
-   margin: 0!important;
-   padding: 0;
-   text-align: center;
-   text-transform: none;
- }
- .ProductList li{
-   list-style: none;
-   padding: 0;
-   margin: 0;
- }
- .CategoryContent {
-   display: block;
-   clear: both;
- }
-
- .ProductList li {
-   position: relative;
-   list-style: none;
-   float: left;
-   width: 244px !important;
-   height: 365px !important;
-
-   min-height: 250px;
-   overflow: hidden;
-   padding: 0 1px 1px 0;
-   margin: 0!important;
-   border: none!important;
-   background: none!important;
- }
-
- .ProductList li .ProductImage  {
-   min-width: 244px !important;
-   min-height: 365px !important;
-   max-width: 244px !important;
-   max-height: 365px !important;
-   line-height: 365px !important;
-   width: 244px !important;
-   height: 365px !important;
-   position: relative;
-   margin: 0 0 0 0 !important;
-   text-align: center;
-   display: block;
-   vertical-align: middle;
-   overflow: hidden;
- }
 
 
 
 
-
- .ProductList .ProductImage img {
-   display: block;
-   height: auto !important;
-   max-height: 367px !important;
-   max-width: 244px !important;
-   vertical-align: middle;
-   width: auto !important;
-   margin: auto;
- }
- .ProductList .ProductDetails {
-   margin: 15px 10px 5px 10px;
-   height: auto !important;
- }
- .ProductList .ProductDetails strong {
-   font-weight: 300;
- }
- .ProductList a {
-   text-decoration: none;
-   color: #ffffff;
- }
- .ProductList em {
-   margin-top: 3px;
-   display: block;
- }
- .ProductPrice, .ProductList em, .CartItemIndividualPrice, .CartItemTotalPrice   {
-   font-family: 'Karla', Arial, Helvetica, sans-serif;
-   letter-spacing: 0.1em;
-   text-transform: uppercase;
-   font-style: normal;
-   font-weight: 700 !important;
-   color: #ffffff;
-   font-size: 14px;
- }
- tbody .CartItemIndividualPrice,
- tbody  .CartItemTotalPrice,
- tbody  .CartItemTotalPrice em  {
-   font-family: Arial, Helvetica, sans-serif;
-   letter-spacing: 0;
-   font-weight: 300 !important;
- }
- .ProductList .Rating {
-   margin-top: 3px;
-   font-weight: bold;
-   display: none;
- }
- .ProductList li .ProductCompareButton {
-   margin-top: 10px;
- }
- .ProductList li .ProductActionAdd {
- }
-
- .ProductList li .ProductActionAdd a,
- .QuickViewBtn {
-   cursor: pointer;
-   color: #ffffff;
- }
- input[type="button"],
- input[type="submit"],
- .btn {
-   cursor: pointer;
-   letter-spacing: 0.1em;
-   color: #ffffff!important;
-   border: 1px solid #ffffff!important;
-   background: transparent !important;
-   padding: 4px 10px 5px 10px !important;
-   font: bold 14px/20px Georgia, "Times New Roman", Times, serif;
-   text-transform: uppercase;
-   -moz-transition: all 150ms ease;
-   -webkit-transition: all 150ms ease;
-   -o-transition: all 150ms ease;
-   transition: all 150ms ease;
- }
-
- input[type="button"]:hover,
- input[type="submit"]:hover,
- .btn:hover {
-   color: #666 !important;
-   border-color: #666 !important;
-   -moz-transition: all 150ms ease;
-   -webkit-transition: all 150ms ease;
-   -o-transition: all 150ms ease;
-   transition: all 150ms ease;
- }
-
-
-
- .btn.dark {
-   border: 1px solid #000 !important;
-   color: #000 !important;
-   background: #fff !important;
- }
- input.btn-secondary[type="button"],
- input.btn-secondary[type="submit"],
- .btn-secondary,
- .GiftWrappingPreviewLinks {
-   padding: 5px 10px !important;
-   float: none !important;
-   letter-spacing: 0.1em !important;
-   font-weight: 400 !important;
-   color: #666 !important;
-   font: 400 12px 'Karla', Arial,Helvetica,sans-serif !important;
-
-   text-transform: uppercase;
-   background: none !important;
-   border: 0px solid #ffffff !important;
- }
-
- input.btn-secondary[type="button"]:hover,
- input.btn-secondary[type="submit"]:hover,
- .btn-secondary:hover,
- .GiftWrappingPreviewLinks:hover   {
-   color: #999 !important;
- }
-
- .GiftWrappingPreviewLinks:before {
-   content: '{ ';
- }
-
- .GiftWrappingPreviewLinks:after {
-   content: ' }';
- }
- .prodAccordionContent .btn {
-   float: none;
-
- }
-
-
- .Left .ProductList li, .Right .ProductList li {
-   margin-bottom: 10px;
- }
- .Left .ProductList .ProductImage, .Right .ProductList .ProductImage {
-   display: none;
- }
-
-
- /* Top Seller Block Specific */
- .Right .TopSellers, .Left .TopSellers {
-   clear: both;
-   padding: 0 0 10px 0;
- }
- .Right .TopSellers ul, .Left .TopSellers ul {
-   margin: 0;
-   padding: 0;
- }
- .Right .TopSellers li, .Left .TopSellers li {
-   clear: both;
-   margin: 0 0 5px 0;
- }
- .Right .TopSellers li .TopSellerNumber, .Left .TopSellers li .TopSellerNumber { /* Contains the number of the item */
-   float: left;
-   width: 22px;
-   font-size: 1.3em;
-   text-align: center;
-   padding: 1px 0 2px 0;
- }
- .Right .TopSellers .ProductDetails, .Left .TopSellers .ProductDetails { /* Contains the details of the item */
-   margin: 0;
-   margin-left: 28px;
- }
- .Right .TopSellers li.TopSeller1, .Left .TopSellers li.TopSeller1 { /* No1 seller box */
- }
- .Right .TopSellers li.TopSeller1 img, .Left .TopSellers li.TopSeller1 img {
-   display: none;
- }
- .Right .TopSellers li.TopSeller1 .ProductImage, .Left .TopSellers li.TopSeller1 .ProductImage {
-   display: none;
- }
- .Content .TopSellers li.TopSeller1 .TopSellerNumber, .Content .TopSellers li .TopSellerNumber {
-   display: none;
- }
 
 
  /* Page Breadcrumbs */
@@ -2444,13 +2137,6 @@
    .LoadingIndicator img {
      vertical-align: middle;
      margin-right: 10px;
-   }
-
-   #TopMenu li.HeaderLiveChat {
-   }
-
-   .HeaderLiveChat img {
-     vertical-align: middle;
    }
 
    .SubCategoryListGrid {
